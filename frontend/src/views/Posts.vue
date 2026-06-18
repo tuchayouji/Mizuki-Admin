@@ -91,8 +91,8 @@ button.cancel { background: #6c757d; }
 .btns { display: flex; gap: 10px; }
 .item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #eee; }
 .item .info { display: flex; flex-direction: column; gap: 4px; }
-.item .name { font-weight: bold; color: #333; }
-.item .file { color: #999; font-size: 12px; }
+.item .name { font-weight: bold; color: #333; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.item .file { color: #999; font-size: 12px; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 .actions { display: flex; gap: 6px; }
 .empty { color: #999; text-align: center; padding: 20px; }
 </style>

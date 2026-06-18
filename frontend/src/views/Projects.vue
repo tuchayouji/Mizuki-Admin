@@ -79,8 +79,8 @@ button.cancel { background: #6c757d; }
 .btns { grid-column: 1 / -1; display: flex; gap: 10px; }
 .item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #eee; }
 .item .info { display: flex; gap: 10px; align-items: center; }
-.item .name { font-weight: bold; color: #333; }
-.tag { padding: 2px 8px; border-radius: 4px; font-size: 12px; background: #e9ecef; color: #495057; }
+.item .name { font-weight: bold; color: #333; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+.tag { padding: 2px 8px; border-radius: 4px; font-size: 12px; background: #e9ecef; color: #495057; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
 .tag.status.completed { background: #28a745; color: #fff; }
 .tag.status.in-progress { background: #ffc107; color: #333; }
 .tag.status.planned { background: #6c757d; color: #fff; }

@@ -73,7 +73,16 @@ const toggle = (group) => {
 
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f5f5f5; }
+@font-face {
+  font-family: 'Loli';
+  src: url('/fonts/loli.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+body { 
+  font-family: 'Loli', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; 
+  background: #f5f5f5; 
+}
 .app { display: flex; min-height: 100vh; }
 .sidebar {
   width: 240px;
