@@ -25,9 +25,16 @@ export const getDiaryImageUrl = (path) => {
   return `/api/diary/images/${filename}`
 }
 export const getAnime = () => api.get('/anime/')
+export const fetchAnimeInfo = (url) => api.post('/anime/fetch', { url })
 export const createAnime = (data) => api.post('/anime/', data)
 export const updateAnime = (title, data) => api.put(`/anime/${title}`, data)
 export const deleteAnime = (title) => api.delete(`/anime/${title}`)
+export const uploadAnimeCover = (file) => {
+  const fd = new FormData()
+  fd.append('file', file)
+  return api.post('/anime/upload-cover', fd)
+}
+export const downloadAnimeCover = (url) => api.post('/anime/download-cover', { url })
 export const getFriends = () => api.get('/friends/')
 export const createFriend = (data) => api.post('/friends/', data)
 export const updateFriend = (name, data) => api.put(`/friends/${name}`, data)

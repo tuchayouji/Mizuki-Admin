@@ -6,11 +6,7 @@ export default defineConfig({
   server: {
     port: 3000,
     proxy: {
-      '/api': 'http://localhost:8000',
-      '/images': {
-        target: 'http://localhost:4321',
-        changeOrigin: true
-      }
+      '/api': 'http://localhost:8000'
     }
   }
 })
