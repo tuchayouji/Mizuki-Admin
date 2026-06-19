@@ -93,7 +93,9 @@ const resetForm = () => {
 const getCoverUrl = (cover) => {
   if (!cover) return ''
   if (cover.startsWith('http')) return cover
-  return '/' + cover
+  // 提取文件名，通过后端API读取
+  const filename = cover.split('/').pop()
+  return `/api/music/covers/${filename}`
 }
 
 const load = async () => { const { data } = await getMusic(); songs.value = data }

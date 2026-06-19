@@ -1,4 +1,5 @@
 from fastapi import APIRouter, UploadFile, File
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import Optional, List
 import re, os, shutil
@@ -8,6 +9,14 @@ router = APIRouter()
 MUSIC_TS_PATH = r"D:\boke\Mizuki\src\components\widgets\music-player\constants.ts"
 MUSIC_URL_DIR = r"D:\boke\Mizuki\public\assets\music\url"
 MUSIC_COVER_DIR = r"D:\boke\Mizuki\public\assets\music\cover"
+
+@router.get("/covers/{filename}")
+def get_cover(filename: str):
+    """直接从博客目录返回封面图片"""
+    filepath = os.path.join(MUSIC_COVER_DIR, filename)
+    if os.path.exists(filepath):
+        return FileResponse(filepath)
+    return {"error": "not found"}
 
 class Song(BaseModel):
     title: str
