@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from routers import config, posts, diary, anime, friends, theme, skills, timeline, projects, albums
+from routers import config, posts, diary, anime, friends, theme, skills, timeline, projects, albums, display
 
 app = FastAPI(title="Mizuki Admin API")
 
@@ -21,6 +21,7 @@ app.include_router(skills.router, prefix="/api/skills", tags=["技能"])
 app.include_router(timeline.router, prefix="/api/timeline", tags=["时间线"])
 app.include_router(projects.router, prefix="/api/projects", tags=["项目"])
 app.include_router(albums.router, prefix="/api/albums", tags=["相册"])
+app.include_router(display.router, prefix="/api/display", tags=["显示"])
 
 @app.get("/")
 def root():
