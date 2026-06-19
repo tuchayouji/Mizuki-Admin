@@ -11,10 +11,12 @@ import SkillsView from './views/Skills.vue'
 import TimelineView from './views/Timeline.vue'
 import ProjectsView from './views/Projects.vue'
 import AlbumsView from './views/Albums.vue'
+import MusicView from './views/Music.vue'
 
 const routes = [
   { path: '/', redirect: '/config' },
   { path: '/config', component: ConfigView },
+  { path: '/music', component: MusicView },
   { path: '/posts', component: PostsView },
   { path: '/diary', component: DiaryView },
   { path: '/anime', component: AnimeView },

@@ -59,3 +59,17 @@ export const updateAlbum = (id, data) => api.put(`/albums/${id}`, data)
 export const deleteAlbum = (id) => api.delete(`/albums/${id}`)
 export const getDisplaySettings = () => api.get('/display/')
 export const updateDisplaySettings = (data) => api.put('/display/', data)
+export const getMusic = () => api.get('/music/')
+export const createMusic = (data) => api.post('/music/', data)
+export const updateMusic = (id, data) => api.put(`/music/${id}`, data)
+export const deleteMusic = (id) => api.delete(`/music/${id}`)
+export const uploadMusicAudio = (file) => {
+  const fd = new FormData()
+  fd.append('file', file)
+  return api.post('/music/upload-audio', fd)
+}
+export const uploadMusicCover = (file) => {
+  const fd = new FormData()
+  fd.append('file', file)
+  return api.post('/music/upload-cover', fd)
+}

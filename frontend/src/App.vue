@@ -40,7 +40,8 @@ const menuGroups = [
     label: '基础设置',
     items: [
       { path: '/config', icon: '🏠', label: '站点配置' },
-      { path: '/theme', icon: '🎨', label: '主题配置' }
+      { path: '/theme', icon: '🎨', label: '主题配置' },
+      { path: '/music', icon: '🎵', label: '音乐管理' }
     ]
   },
   {
